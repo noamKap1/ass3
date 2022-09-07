@@ -26,3 +26,5 @@ we dont provide the files so in the upload comman you should put a right path, f
 and in her put the train and the test files, to uplaod the train file for example you should write the path: ../files/train.csv <br/>
 when you used the display to the screen command, after the data is displayed please enter enter.
 
+# Final assignment:
+![**Thank you for this semester**](https://image.shutterstock.com/image-vector/thank-you-poster-spectrum-brush-260nw-1153070891.jpg)
