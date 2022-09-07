@@ -3,8 +3,8 @@
 #include <cstdio>
 #include <cmath>
 
-#ifndef CLIENT_MANDISTANCE_H
-#define CLIENT_MANDISTANCE_H
+#ifndef FINAL_MANDISTANCE_H
+#define FINAL_MANDISTANCE_H
 
 
 template<class T>
@@ -32,4 +32,4 @@ public:
 };
 
 
-#endif //CLIENT_MANDISTANCE_H
+#endif //FINAL_MANDISTANCE_H
