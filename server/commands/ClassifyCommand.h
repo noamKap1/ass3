@@ -1,8 +1,8 @@
 #include "Command.h"
 #include "thread"
 
-#ifndef TESTING_CLASSIFYCOMMAND_H
-#define TESTING_CLASSIFYCOMMAND_H
+#ifndef FINAL_CLASSIFYCOMMAND_H
+#define FINAL_CLASSIFYCOMMAND_H
 
 template<class T>
 class ClassifyCommand : public Command<T> {
@@ -22,4 +22,4 @@ public:
     }
 };
 
-#endif //TESTING_CLASSIFYCOMMAND_H
+#endif //FINAL_CLASSIFYCOMMAND_H
