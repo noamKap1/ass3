@@ -24,7 +24,7 @@ in the first command-line write: cd server, and then ./Server <br/>
 after we run the server write in the second command-line: cd client, and then ./Client <br/>
 we dont provide the files so in the upload comman you should put a right path, for example open in "depository name" another depository named "files" 
 and in her put the train and the test files, to uplaod the train file for example you should write the path: ../files/train.csv <br/>
-after using a command press enter until you returned to the manu (once).
+after using a command press enter until you returned to the manu (press once even if the manu is shown). <br/>
 in the file result command, when we entered "result" the filed appeard in the client depository. <br/>
 (if when you press 5 and you doesn't requaried a string for the output file that means you missed an enter and need to press 5 again) <br/>
 
