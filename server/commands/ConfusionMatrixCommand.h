@@ -4,8 +4,8 @@
 #include "../Flower.h"
 #include "../Classifier.h"
 
-#ifndef TESTING_CONFUSIONMATRIXCOMMAND_H
-#define TESTING_CONFUSIONMATRIXCOMMAND_H
+#ifndef FINAL_CONFUSIONMATRIXCOMMAND_H
+#define FINAL_CONFUSIONMATRIXCOMMAND_H
 
 template<class T>
 class ConfusionMatrixCommand : public Command<T> {
@@ -74,4 +74,4 @@ public:
 };
 
 
-#endif //TESTING_CONFUSIONMATRIXCOMMAND_H
+#endif //FINAL_CONFUSIONMATRIXCOMMAND_H
