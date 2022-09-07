@@ -2,8 +2,8 @@
 #include "../Server.h"
 #include "string"
 
-#ifndef TESTING_SOCKETIO_H
-#define TESTING_SOCKETIO_H
+#ifndef FINAL_SOCKETIO_H
+#define FINAL_SOCKETIO_H
 
 
 class SocketIO : public DefaultIO {
@@ -21,4 +21,4 @@ public:
 };
 
 
-#endif //TESTING_SOCKETIO_H
+#endif //FINAL_SOCKETIO_H
