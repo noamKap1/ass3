@@ -11,7 +11,7 @@ We build the server with multithreading so he can handle time using commands on 
 We build the client has with 2 threads the receiving thread and the sending thread so the client can keep sending messages without having to wait for response from the server.
 
 # Compiling and Running:
-**We used std::make_unique which is can't be compiled on c++11 so please run the code in c++14. (we heard in the class that you agreed to other couple and we did the same mistake)**/
+##We used std::make_unique which is can't be compiled on c++11 so please run the code in c++14. (we heard in the class that you agreed to other couple and we did the same mistake)
 You should use our CMakeLists.txt file to compile and run.
 example:
 (we used vscode and ubuntu to compile and run)
