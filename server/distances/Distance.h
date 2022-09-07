@@ -1,7 +1,7 @@
 #include "string"
 
-#ifndef CLIENT_DISTANCE_H
-#define CLIENT_DISTANCE_H
+#ifndef FINAL_DISTANCE_H
+#define FINAL_DISTANCE_H
 
 template<class T>
 class Distance {
@@ -14,4 +14,4 @@ public:
 };
 
 
-#endif //CLIENT_DISTANCE_H
+#endif //FINAL_DISTANCE_H
