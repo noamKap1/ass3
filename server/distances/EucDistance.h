@@ -3,8 +3,8 @@
 #include <cstdio>
 #include <cmath>
 
-#ifndef CLIENT_EUCDISTANCE_H
-#define CLIENT_EUCDISTANCE_H
+#ifndef FINAL_EUCDISTANCE_H
+#define FINAL_EUCDISTANCE_H
 
 template<class T>
 class EucDistance : public Distance<T> {
@@ -33,4 +33,4 @@ public:
 };
 
 
-#endif //CLIENT_EUCDISTANCE_H
+#endif //FINAL_EUCDISTANCE_H
