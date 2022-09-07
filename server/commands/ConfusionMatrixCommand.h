@@ -7,24 +7,24 @@
 #ifndef TESTING_CONFUSIONMATRIXCOMMAND_H
 #define TESTING_CONFUSIONMATRIXCOMMAND_H
 
-#define DESC "display algorithm confusion matrix"
-
 template<class T>
 class ConfusionMatrixCommand : public Command<T> {
 
 public:
-    ConfusionMatrixCommand(DefaultIO *defaultIo, Data<T> *dataManager) : Command<T>(DESC, defaultIo, dataManager) {}
+    ConfusionMatrixCommand(DefaultIO *defaultIo, Data<T> *dataManager) : Command<T>("display algorithm confusion matrix", defaultIo, dataManager) {}
 
-    std::string MatToString(std::vector<std::vector<double>> mat) {
-        std::string str;
+    void MatToString(std::vector<std::vector<std::string>> mat) {
+        std::string str = "";
+        std::vector<T> testVec = this->getCommandData()->getTest();
         for (int i = 0; i < this->getCommandData()->getTest().size(); i++) {
-            std::string row = this->getCommandData()->getTest()[i].getFlowerType();
+            std::string row = testVec[i].getFlowerType();
             for (const auto &e: mat[i]) {
-                row += "\t" + std::to_string(e) + "%";
+                row += "\t" + e + "%";
             }
             str += row + "\n";
         }
-        return str;
+        this->getCommandIO()->IOWrite(str);
+        this->getCommandIO()->IOWrite(this->getCommandData()->getDataClassifier()->toString());
     }
 
     void execute() override {
@@ -45,6 +45,7 @@ public:
             elementsMap[testVec[i].getFlowerType()][classified[i]]++;
         }
         for (const auto &p: elementsMap) {
+            flowerTypes.push_back(p.first);
             double sumOfApperances = 0;
             for (const auto &k: p.second) {
                 sumOfApperances += k.second;
@@ -53,26 +54,35 @@ public:
             for (const auto &k: p.second) {
                 elementsMap[p.first][k.first] = (k.second * 100) / sumOfApperances;
             }
-
-            flowerTypes.push_back(p.first);
         }
         for (const auto &p: elementsMap) {
-            for (const std::string &flowerType: flowerTypes) {
-                if (!elementsMap.at(p.first).count(flowerType)) {
-                    elementsMap[p.first][flowerType] = 0;
+            for (const std::string &flower: flowerTypes) {
+                if (!elementsMap[p.first].count(flower)) {
+                    elementsMap[p.first][flower] = 0;
                 }
             }
         }
-        std::vector<std::vector<double>> mat;
-        for(const auto &percentages : elementsMap){
-            std::vector<double> prediction;
-            for(const auto &predict : percentages.second){
-                prediction.push_back(predict.second);
+        std::vector<std::vector<std::string>> mat;
+        for (const auto &percentages: elementsMap) {
+            std::vector<std::string> prediction;
+            for (const auto &predict: percentages.second) {
+                prediction.push_back(std::to_string(predict.second));
             }
             mat.push_back(prediction);
         }
-        this->getCommandIO()->IOWrite(MatToString(mat));
-        this->getCommandIO()->IOWrite(this->getCommandData()->getDataClassifier()->toString());
+        std::string str = "";
+        for (const std::string &s: flowerTypes) {
+            str.append(s + "\t");
+        }
+        str.append("\n");
+        for (const std::string& type: flowerTypes) {
+            str.append(type + "\t");
+            for(std::string &pType : flowerTypes){
+                str.append(std::to_string(elementsMap[type][pType]) + "\t");
+            }
+            str.append("\n");
+        }
+        this->getCommandIO()->IOWrite(str);
         this->getCommandIO()->IORead();
     }
 };
