@@ -27,4 +27,5 @@ and in her put the train and the test files, to uplaod the train file for exampl
 when you used the display to the screen command, after the data is displayed please enter enter.
 
 # Final assignment:
+**Thank you for this semester**
 ![**Thank you for this semester**](https://image.shutterstock.com/image-vector/thank-you-poster-spectrum-brush-260nw-1153070891.jpg)
