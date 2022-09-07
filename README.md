@@ -13,16 +13,16 @@ We build the client has with 2 threads the receiving thread and the sending thre
 # Compiling and Running:
 ## We used std::make_unique which is can't be compiled on c++11 so please run the code in c++14. (we heard in the class that you agreed to other couple and we did the same mistake)
 You should use our CMakeLists.txt file to compile and run. <br/>
-example:
+example: 
 (we used vscode and ubuntu to compile and run)
-first write: mkdir "depository name"
-afterwards: cd "depository name"
-afterwards: cmake ..
-afterwards: make
-then you should open another command-line (its like that in vscode), one for the server and one for the client.
-in the first command-line write: cd server, and then ./Server
-after we run the server write in the second command-line: cd client, and then ./Client
+first write: mkdir "depository name" <br/>
+afterwards: cd "depository name" <br/>
+afterwards: cmake .. <br/>
+afterwards: make <br/>
+then you should open another command-line (its like that in vscode), one for the server and one for the client. <br/>
+in the first command-line write: cd server, and then ./Server <br/>
+after we run the server write in the second command-line: cd client, and then ./Client <br/>
 we dont provide the files so in the upload comman you should put a right path, for example open in "depository name" another depository named "files" 
-and in her put the train and the test files, to uplaod the train file for example you should write the path: ../files/train.csv
+and in her put the train and the test files, to uplaod the train file for example you should write the path: ../files/train.csv <br/>
 when you used the display to the screen command, after the data is displayed please enter enter.
 
