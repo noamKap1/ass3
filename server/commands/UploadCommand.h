@@ -4,8 +4,8 @@
 #include "../IOs/DefaultIO.h"
 #include "../Data.h"
 
-#ifndef CLIENT_UPLOADCOMMAND_H
-#define CLIENT_UPLOADCOMMAND_H
+#ifndef FINAL_UPLOADCOMMAND_H
+#define FINAL_UPLOADCOMMAND_H
 
 template<class T>
 class UploadCommand : public Command<T> {
@@ -45,4 +45,4 @@ public:
 };
 
 
-#endif //CLIENT_UPLOADCOMMAND_H
+#endif //FINAL_UPLOADCOMMAND_H
