@@ -13,20 +13,6 @@ class ConfusionMatrixCommand : public Command<T> {
 public:
     ConfusionMatrixCommand(DefaultIO *defaultIo, Data<T> *dataManager) : Command<T>("display algorithm confusion matrix", defaultIo, dataManager) {}
 
-    void MatToString(std::vector<std::vector<std::string>> mat) {
-        std::string str = "";
-        std::vector<T> testVec = this->getCommandData()->getTest();
-        for (int i = 0; i < this->getCommandData()->getTest().size(); i++) {
-            std::string row = testVec[i].getFlowerType();
-            for (const auto &e: mat[i]) {
-                row += "\t" + e + "%";
-            }
-            str += row + "\n";
-        }
-        this->getCommandIO()->IOWrite(str);
-        this->getCommandIO()->IOWrite(this->getCommandData()->getDataClassifier()->toString());
-    }
-
     void execute() override {
         std::vector<std::string> classified = this->getCommandData()->getClassified();
         std::vector<T> testVec = this->getCommandData()->getTest();
