@@ -1,7 +1,7 @@
 #include "string"
 
-#ifndef CLIENT_DEFAULTIO_H
-#define CLIENT_DEFAULTIO_H
+#ifndef FINAL_DEFAULTIO_H
+#define FINAL_DEFAULTIO_H
 
 
 class DefaultIO {
@@ -12,4 +12,4 @@ public:
 };
 
 
-#endif //CLIENT_DEFAULTIO_H
+#endif //FINAL_DEFAULTIO_H
