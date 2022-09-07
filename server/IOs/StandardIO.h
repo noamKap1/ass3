@@ -1,7 +1,7 @@
 #include "DefaultIO.h"
 
-#ifndef CLIENT_STANDARDIO_H
-#define CLIENT_STANDARDIO_H
+#ifndef FINAL_STANDARDIO_H
+#define FINAL_STANDARDIO_H
 
 
 class StandardIO : public DefaultIO {
@@ -12,4 +12,4 @@ public:
 };
 
 
-#endif //CLIENT_STANDARDIO_H
+#endif //FINAL_STANDARDIO_H
