@@ -1,17 +1,17 @@
-# ass3
-# Implementation:
-We changed the code of the client and the server in a specific way that so the server supports unlimited amount of columns in a csv file (the requast was 10) and unlimited-size messages, and for the fact that the client will not know what server receives his messages and what server sends him messages.
+# ASS3
+# Our Implementation:
+We changed the code of the client and the server in a specific way that so the server supports unlimited amount of columns in a csv file (the request was 10) and unlimited-size messages, and for the fact that the client will not know what server receives his messages and what server sends him messages.
 
 We changed the classify function and the classifier class so that can work with the client choosing which metric system he wants from the algorithm in run-time, then the classifier chooses the closest type which has the most votes like in ass1.
 
 # Server:
-We build the server with multithreading so he can handle time using commands on a different thread so the client will be able to send more messages while waiting for response and for handling multiple clients all in once.
+We built the server with multithreading so he can handle time using commands on a different thread so the client will be able to send more messages while waiting for response and for handling multiple clients all in once.
 
 # Client:
-We build the client has with 2 threads the receiving thread and the sending thread so the client can keep sending messages without having to wait for response from the server.
+We built the client has with 2 threads the receiving thread and the sending thread so the client can keep sending messages without having to wait for response from the server.
 
 # Compiling and Running:
-## We used std::make_unique which is can't be compiled on c++11 so please run the code in c++14. (we heard in the class that you agreed to other couple and we did the same mistake)
+## We used std::make_unique which is can't be compiled on c++11 so please run the code in c++14 (We heard in the class that you agreed to other couple and we did the same mistake).
 You should use our CMakeLists.txt file to compile and run. <br/>
 example: 
 (we used vscode and ubuntu to compile and run)
@@ -28,7 +28,7 @@ after using a command press enter until you returned to the manu - press once af
 in the file result command, when we entered "result" the filed appeard in the client depository. <br/>
 
 # Work management:
-We both have equally worked on this, from convenience considerations Noam has uploaded all files.
+We both have equally worked on this assignment, but from convenience considerations Noam has managed the git and took care of uploading all files the readme.
 
 # Final assignment:
 **Thank you for this semester**
