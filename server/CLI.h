@@ -25,7 +25,7 @@ public:
     CLI(DefaultIO *io, std::vector<std::unique_ptr<Command<Flower>>> commands) : io(io), commands(std::move(commands)) {
     }
 
-    void run() {
+    void start() {
         while (true) {
             print();
             std::string option = io->IORead();
