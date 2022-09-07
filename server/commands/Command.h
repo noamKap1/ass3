@@ -3,8 +3,8 @@
 #include "../IOs/DefaultIO.h"
 #include "../Data.h"
 
-#ifndef CLIENT_COMMAND_H
-#define CLIENT_COMMAND_H
+#ifndef FINAL_COMMAND_H
+#define FINAL_COMMAND_H
 
 template<class T>
 class Command {
@@ -33,4 +33,4 @@ public:
     virtual ~Command() = default;
 };
 
-#endif //CLIENT_COMMAND_H
+#endif //FINAL_COMMAND_H
