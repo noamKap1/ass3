@@ -45,6 +45,6 @@ void clientHandler(int cSocket, Server *server) {
     commandVector.push_back(std::make_unique<FileResultsCommand<Flower>>(&io, &data));
     commandVector.push_back(std::make_unique<ConfusionMatrixCommand<Flower>>(&io, &data));
     CLI<Flower> c(&io, std::move(commandVector));
-    c.run();
+    c.start();
     server->removeClient();
 }
