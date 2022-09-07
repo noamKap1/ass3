@@ -3,8 +3,8 @@
 #include <cstdio>
 #include <cmath>
 
-#ifndef CLIENT_CHEDISTANCE_H
-#define CLIENT_CHEDISTANCE_H
+#ifndef FINAL_CHEDISTANCE_H
+#define FINAL_CHEDISTANCE_H
 
 template<class T>
 class CheDistance : public Distance<T> {
@@ -34,4 +34,4 @@ public:
 };
 
 
-#endif //CLIENT_CHEDISTANCE_H
+#endif //FINAL_CHEDISTANCE_H
